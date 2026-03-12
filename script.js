@@ -60,7 +60,7 @@ function flipCard(card) {
     const colors = ["#FF6347", "#00BFFF"]; 
     const activeColors = ["#B22222", "#0000CD"];   
     
-    card.innerHTML = `<img src="/${card.dataset.val}.png">`;
+    card.innerHTML = `<img src="${card.dataset.val}.png">`;
     card.style.backgroundColor = colors[state.turn];
 
     if (!state.first) return (state.first = card);
