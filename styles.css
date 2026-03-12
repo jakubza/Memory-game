@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    background-image: url("minecraft-dirt-grass-pixelated-art-182eubjywbt351az.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 30px;
+}
+
+h1 {
+    color: white;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.85);
+    font-size: 3rem;
+    text-align: center;
+}
+
+#START_b {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    font-size: 24px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.slider-container {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 20px;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    user-select: none;
+    pointer-events: none;
+}
+
+.labels.show {
+    opacity: 1;
+}
+
+#grid-container {
+    display: grid;
+    width: 90vw;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    margin: 20px auto;
+    gap: 5px;
+}
+
+.grid-cell {
+    width: 100%;
+    height: 100%;
+    background-color: #8B4513;
+    border: 2px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background-color 0.3s;
+    user-select: none;
+}
+
+.grid-cell:hover {
+    transform: scale(1.05);
+}
+
+#grid {
+    display: grid;
+    gap: 8px;
+    width: 95vw;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.card {
+    background-color: #8B4513;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 6px;
+
+
+    transition: background-color 0.4s ease, opacity 0.3s ease, transform 0.2s ease;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.card:active {
+    transform: scale(0.95);
+}
+
+.card img {
+    pointer-events: none;
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: contain;
+
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.matched {
+    cursor: default !important;
+    opacity: 0.9;
+    transform: scale(1) !important;
+}
